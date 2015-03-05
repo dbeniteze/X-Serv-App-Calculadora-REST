@@ -41,7 +41,7 @@ class webApp:
         # Create a TCP objet socket and bind it to a port
         mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         mySocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        mySocket.bind((hostname, port))
+        mySocket.bind((socket.gethostname(), port))
 
         # Queue a maximum of 5 TCP connection requests
         mySocket.listen(5)
