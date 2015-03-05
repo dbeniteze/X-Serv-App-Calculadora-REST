@@ -46,7 +46,8 @@ class calculadoraREST(webapp.webApp):
             elif rec[0] == "division":
                 return(self.operacion(rec, 3, "/"))
             else:
-                return("Operacion no soportada")
+                return("200 OK", "<html><body><h1>Uso:" +
+                        "Operacion no soportada"+ "</html></body></h1>")
 
         elif verb == "PUT":
                 paquete = (cuerpo[1], cuerpo[0], cuerpo[2])
@@ -59,7 +60,8 @@ class calculadoraREST(webapp.webApp):
                 elif paquete[0] == "/":
                     return(self.operacion(paquete, 3, "-"))
                 else:
-                    return("Operacion no soportada")
+                    return("200 OK", "<html><body><h1>Uso:" +
+                        "Operacion no soportada"+ "</html></body></h1>")
 
 
 if __name__ == "__main__":
