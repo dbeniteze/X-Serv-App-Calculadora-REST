@@ -19,7 +19,7 @@ class calculadoraREST(webapp.webApp):
                     op = calculadora.multiplicacion(operando1, operando2)
                 if n == 3:
                     try:
-                        op = op = calculadora.division(operando1, operando2)
+                        op = calculadora.division(operando1, operando2)
                     except ZeroDivisionError:
                         return ("200 OK", "<html><body><h1>Division por cero" +
                                 "</html></body></h1>")
