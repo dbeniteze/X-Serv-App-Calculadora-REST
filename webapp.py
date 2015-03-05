@@ -25,7 +25,7 @@ class webApp:
         verb = request.split()[0]
         rec = request.split()[1].split("/")[1:]
         cuerpo = request.split("\r\n\r\n")[1]
-        return (verb,rec,cuerpo)
+        return (verb, rec, cuerpo)
 
     def process(self, parsedRequest):
         """Process the relevant elements of the request.
