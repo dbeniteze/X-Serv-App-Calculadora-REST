@@ -22,7 +22,7 @@ class calculadoraREST(webapp.webApp):
                     except ZeroDivisionError:
                         return ("200 OK", "<html><body><h1>Division por cero" +
                                 "</html></body></h1>")
-                
+
                 return ("200 OK", "<html><body><h1>" +
                         "La operacion" + "</h1><p>" + parsedRequest[1] + sig +
                         parsedRequest[2] + " = " + str(op) + "</body></html>")
@@ -32,8 +32,6 @@ class calculadoraREST(webapp.webApp):
             except IndexError:
                 return ("200 OK", "<html><body><h1>Uso:" +
                         "/suma/op1/op2</html></body></h1>")
-            
-       
 
     def process(self, parserequest):
         (verb, rec, cuerpo) = parserequest
@@ -48,9 +46,9 @@ class calculadoraREST(webapp.webApp):
                 return(self.operacion(rec, 3, "/"))
             else:
                 return("Operacion no soportada")
-                
-        elif verb == "PUT":
-            paquete = (cuerpo[1],cuerpo[0],cuerpo[2])
+
+    elif verb == "PUT":
+            paquete = (cuerpo[1], cuerpo[0], cuerpo[2])
             if paquete[0] == "+":
                 return(self.operacion(paquete, 0, "+"))
             elif paquete[0] == "-":
@@ -61,7 +59,7 @@ class calculadoraREST(webapp.webApp):
                 return(self.operacion(paquete, 3, "-"))
             else:
                 return("Operacion no soportada")
-            
+
 
 if __name__ == "__main__":
     try:
