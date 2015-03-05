@@ -2,6 +2,7 @@
 
 import webapp
 import calculadora
+import sys
 
 
 class calculadoraREST(webapp.webApp):
