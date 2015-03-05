@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import webapp
-import sys
 import calculadora
 
 
