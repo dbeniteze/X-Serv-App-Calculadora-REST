@@ -47,18 +47,18 @@ class calculadoraREST(webapp.webApp):
             else:
                 return("Operacion no soportada")
 
-    elif verb == "PUT":
-            paquete = (cuerpo[1], cuerpo[0], cuerpo[2])
-            if paquete[0] == "+":
-                return(self.operacion(paquete, 0, "+"))
-            elif paquete[0] == "-":
-                return(self.operacion(paquete, 1, "-"))
-            elif paquete[0] == "*":
-                return(self.operacion(paquete, 2, "-"))
-            elif paquete[0] == "/":
-                return(self.operacion(paquete, 3, "-"))
-            else:
-                return("Operacion no soportada")
+        elif verb == "PUT":
+                paquete = (cuerpo[1], cuerpo[0], cuerpo[2])
+                if paquete[0] == "+":
+                    return(self.operacion(paquete, 0, "+"))
+                elif paquete[0] == "-":
+                    return(self.operacion(paquete, 1, "-"))
+                elif paquete[0] == "*":
+                    return(self.operacion(paquete, 2, "-"))
+                elif paquete[0] == "/":
+                    return(self.operacion(paquete, 3, "-"))
+                else:
+                    return("Operacion no soportada")
 
 
 if __name__ == "__main__":
